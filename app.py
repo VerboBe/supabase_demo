@@ -2,9 +2,11 @@ import web
 from mvc.controllers.index import Index
 from mvc.controllers.contactos import Contactos
 
+web.config.debug = False
+
 url = (
-    '/', 'Index',
-    '/contactos', 'mvc.controllers.contactos.Contactos',
+    '/', 'Index', 
+    '/', 'Contactos', 'mvc.controllers.contactos.Contactos',
 )
 
 app = web.application(url, globals())
