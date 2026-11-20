@@ -34,7 +34,13 @@ class AuthUserts:
             logger.error(f"ERROR 100: {str(error)}")
             print(f"ERROR 100: {str(error)}")
             
+    def registrarusuarios(self, email:str, password:str) ->  None:
+    
+        print(f"Usario registrado exitosamente")
+
+            
 if __name__ == "__main__":
     print("- - AUTENTICACION DE USUARIOS - -")
     objeto = AuthUserts()
     objeto.iniciarSesion("usuario@gmail.com", "123456")
+    print(objeyto )

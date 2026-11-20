@@ -88,7 +88,6 @@ class ModelContactos:
 
     def insertarContacto(self,nombre:str,email:str,telefono:str, foto:str):
         try:
-            # INSERT INTO contactos(nombre,email,telefono) VALUES(?,?,?);
             data = {
                 "nombre":nombre,
                 "email":email,
@@ -100,6 +99,7 @@ class ModelContactos:
             return response.data
         
         except Exception as error:
+            logger.error("Error 103: %s", error)
             print(f"ERROR 103: {str(error)}")
 
     def borrarContacto(self,id_contacto:str):
